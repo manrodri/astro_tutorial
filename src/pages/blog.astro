@@ -1,9 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
+const pageTitle = 'My Astro Learning Blog'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title={pageTitle}>
 	<main>
 		<svg
 			class="astro-a"
@@ -37,13 +39,14 @@ import Card from '../components/Card.astro';
         <a href="/about/">About</a>
         <a href="/blog/">Blog</a>
 
-        <h1>Blog</h1>
-        <h2>... my new Astro Blog!</h2>
-      
-        <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-      
-        <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-		</p>
+        <h1>{pageTitle}</h1>
+        <p>This is where I will post about my journey learning Astro.</p>
+        <ul>
+          <li><a href="/posts/post-1/">Post 1</a></li>
+          <li><a href="/posts/post-2/">Post 2</a></li>
+          <li><a href="/posts/post-3/">Post 3</a></li>
+
+        </ul>
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
